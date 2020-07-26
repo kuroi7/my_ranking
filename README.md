@@ -1,5 +1,14 @@
 # README
 
+## アプリ概要
+自分のランキングを他人と共有するSNSアプリを開発する。　
+## 主な機能
+* ログイン機能（ユーザー管理機能）
+* ランキング機能（JSを使用したドラック&ドロップ）
+* タグ機能
+* いいね機能
+* フォローフォロワー機能
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
