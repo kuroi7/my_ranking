@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// 2020/08/10、必要な追加する
+//= require jquery3
+//= require rails-ujs
+//= require jquery-ui/widgets/sortable
+//= require jquery-ui/effects/effect-highlight

@@ -60,3 +60,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# 2020/08/09：並び替え機能のGEM
+gem 'ranked-model'
