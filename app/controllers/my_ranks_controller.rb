@@ -1,4 +1,9 @@
 class MyRanksController < ApplicationController
+
+  def index
+    @myRanking = MyRank.all
+  end
+
   def sort
     dream = MyRank.find(params[:my_rank_id])
     dream.update(my_rank_params)

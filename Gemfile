@@ -63,3 +63,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 2020/08/09：並び替え機能のGEM
 gem 'ranked-model'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem "haml-rails"
