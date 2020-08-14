@@ -20,3 +20,6 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery-ui/widgets/sortable
+
+//= require popper
+//= require bootstrap-sprockets

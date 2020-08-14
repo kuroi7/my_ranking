@@ -1,6 +1,6 @@
 %p#notice= notice
 %h1 マイランキング
-%table.table
+%table.table.table-hover.w-50
   %thead
     %tr
       %th 
@@ -27,4 +27,4 @@
         %td
           = link_to 'Destroy', myrank, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
--# = link_to '新規登録', new_my_ranking_path
+= link_to '新規登録', new_my_rank_path
