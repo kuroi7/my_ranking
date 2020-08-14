@@ -1,5 +1,5 @@
 %p#notice= notice
-%h1 MyMovieRanking
+%h1 マイランキング
 %table.table
   %thead
     %tr
@@ -14,16 +14,16 @@
       %th 
         削除
   %tbody.table-sortable
-    - @myRanking.each do |myrank|
-      %tr.item{"data-model-name": myrank.class.name.underscore, "data-update-url": my_ranking_sort_path(myrank)}
+    - @myRank.each do |myrank|
+      %tr.item{"data-model-name": myrank.class.name.underscore, "data-update-url": my_rank_sort_path(myrank)}
         %td
           = myrank.title
         %td
-          = myrank.content
+          = myrank.contents
         %td
-          = link_to 'Show', myrank
+          = link_to 'Show', '#'
         %td
-          = link_to 'Edit', edit_my_ranking_path(myrank)
+          = link_to 'Edit', '#'
         %td
           = link_to 'Destroy', myrank, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
