@@ -1,0 +1,2 @@
+module MyRanksHelper
+end
