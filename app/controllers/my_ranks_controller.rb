@@ -4,10 +4,19 @@ class MyRanksController < ApplicationController
     @myRank = MyRank.where(user_id: 1).rank(:row_order)
   end
 
+  def new
+    @myRank = MyRank.new
+  end
+
+  def create
+    MyRank.create(my_rank_params)
+    redirect_to my_ranks_path
+  end
+
   def update
-    myRank = MyRanking.find(params[:id])
+    myRank = MyRank.find(params[:id])
     myRank.update(my_rank_params)
-    redirect_to my_rank_path
+    redirect_to my_ranks_path
   end
 
   def sort
