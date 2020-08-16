@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :my_ranks do 
     put :sort
+    post :hold_contents
   end
 end

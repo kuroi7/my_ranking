@@ -19,6 +19,13 @@ class MyRanksController < ApplicationController
     redirect_to my_ranks_path
   end
 
+  def hold_contents
+    @myrank = MyRank.find(params[:my_rank_id])
+    p = @myrank.hold + 1
+    @myrank.update(hold: p)
+    render json: @myrank.id
+  end
+
   def sort
     myRank = MyRank.find(params[:my_rank_id])
     myRank.update(my_rank_params)
@@ -26,6 +33,6 @@ class MyRanksController < ApplicationController
 
   private
   def my_rank_params
-    params.require(:my_rank).permit(:title, :contents, :row_order_position) 
+    params.require(:my_rank).permit(:title, :contents, :hold, :row_order_position) 
   end
 end
