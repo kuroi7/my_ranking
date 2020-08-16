@@ -21,7 +21,12 @@ class MyRanksController < ApplicationController
 
   def hold_contents
     @myrank = MyRank.find(params[:my_rank_id])
-    p = @myrank.hold + 1
+    # p = @myrank.hold + 1
+    if @myrank.hold?
+      p = 0
+    else
+      p = 1
+    end
     @myrank.update(hold: p)
     render json: @myrank.id
   end

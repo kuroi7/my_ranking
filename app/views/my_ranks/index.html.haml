@@ -16,7 +16,45 @@
       %th
         保留
   %tbody.table-sortable
-    - @myRank.each do |myrank|
+    - @myRank.where(hold:0).each do |myrank|
+      %tr.item{"data-model-name": myrank.class.name.underscore, "data-update-url": my_rank_sort_path(myrank)}
+        %td
+          = myrank.title
+        %td
+          = myrank.contents
+        %td
+          = link_to 'Show', '#'
+        %td
+          = link_to 'Edit', '#'
+        %td
+          = link_to 'Destroy', myrank, method: :delete, data: { confirm: 'Are you sure?' }
+        %td
+          .review_my_count_area
+            = link_to my_rank_hold_contents_path(myrank), method: :post, remote: :true, class: :like_review_btn do
+              .like_review_link
+                .like_review
+                  test
+
+%br
+%br
+
+%table.table.table-hover.w-50
+  %thead
+    %tr
+      %th 
+        タイトル
+      %th 
+        感想
+      %th 
+        表示
+      %th 
+        編集
+      %th 
+        削除
+      %th
+        保留
+  %tbody.table-sortable
+    - @myRank.where(hold:1).each do |myrank|
       %tr.item{"data-model-name": myrank.class.name.underscore, "data-update-url": my_rank_sort_path(myrank)}
         %td
           = myrank.title
