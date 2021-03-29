@@ -1,10 +1,12 @@
 class MyRanksController < ApplicationController
 
   def index
+    # TOD：ユーザーIDを仮で1に設定、devceを導入する
     @myRank = MyRank.where(user_id: 1).rank(:row_order)
   end
 
   def new
+    @myRanks = MyRank.where(user_id: 1).rank(:row_order)
     @myRank = MyRank.new
   end
 
