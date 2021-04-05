@@ -1,35 +1,9 @@
 %p#notice= notice
 %h1 マイランキング
-%table.table.table-hover.w-50
-  %thead
-    %tr
-      %th 
-        タイトル
-      %th 
-        感想
-      %th 
-        表示
-      %th 
-        編集
-      %th 
-        削除
-  %tbody.table-sortable
-    - @myRanks.each do |myrank|
-      %tr.item{"data-model-name": myrank.class.name.underscore, "data-update-url": my_rank_sort_path(myrank)}
-        %td
-          = myrank.title
-        %td
-          = myrank.contents
-        %td
-          = link_to 'Show', '#'
-        %td
-          = link_to 'Edit', '#'
-        %td
-          = link_to 'Destroy', myrank, method: :delete, data: { confirm: 'Are you sure?' }
-    = form_with model:@myRank, local:true do |f|
-      = f.text_field :title
-      = f.text_field :contents
-      = f.submit "登録する"
-
-%br/
-= link_to '新規登録', new_my_rank_path
+= form_with model:@myRank, local:true do |f|
+  タイトル
+  = f.text_field :title 
+  %br/
+  本文
+  = f.text_field :contents 
+  = f.submit "登録する"
