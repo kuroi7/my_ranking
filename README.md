@@ -9,6 +9,10 @@
 * いいね機能
 * フォローフォロワー機能
 
+残りの作業  
+新規登録  
+編集
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
