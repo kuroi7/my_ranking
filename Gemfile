@@ -69,3 +69,4 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 gem "haml-rails"
+gem  " actionview "、" > = 5.2.4.4 "
