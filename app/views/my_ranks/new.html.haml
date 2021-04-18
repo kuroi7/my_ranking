@@ -1,9 +1,12 @@
 %p#notice= notice
 %h1 マイランキング
 = form_with model:@myRank, local:true do |f|
-  タイトル
-  = f.text_field :title 
-  %br/
-  本文
-  = f.text_field :contents 
-  = f.submit "登録する"
+  .mb-3
+    %label.form-label
+      タイトル
+    = f.text_field :title, class:"form-control"
+  .mb-3
+    %label.form-label 
+      感想
+    = f.text_field :contents, class:"form-control"
+  = f.submit "登録する" ,class:"btn btn-primary"
