@@ -6,7 +6,6 @@ class MyRanksController < ApplicationController
   end
 
   def new
-    @myRanks = MyRank.where(user_id: 1).rank(:row_order)
     @myRank = MyRank.new
   end
 
@@ -28,6 +27,6 @@ class MyRanksController < ApplicationController
 
   private
   def my_rank_params
-    params.require(:my_rank).permit(:title, :contents, :row_order_position) 
+    params.require(:my_rank).permit(:title, :contents, :row_order_position).merge(user_id: 1)
   end
 end
